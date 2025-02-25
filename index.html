@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập nhập môn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bài tập nhập môn</h1>
+        <input type="number" placeholder="Nhập số nguyên N">
+        <input type="button" value="Tính" onclick="tinh()">
+        <p id="result"> S =</p>
+    </div>
+    
+</body>
+<script>
+    tinh = () =>{
+        const N = document.querySelector('input[type="number"]').value;
+        let S = 0;
+        // S = 11 + 22 +33 + NN;
+        for(let i = 1; i <= N; i++){
+            S += parseInt(`${i}${i}`);
+        }
+        const result = document.getElementById('result');
+        result.innerHTML = `S = ${S}`;
+    }
+</script>
+</html>
